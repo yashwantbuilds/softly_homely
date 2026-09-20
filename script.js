@@ -49,7 +49,7 @@ const renderReels = (gridId, reels) => {
   const grid = document.querySelector(gridId);
   if (!grid || !reels.length) return;
   grid.classList.add('embedded-reels');
-  grid.innerHTML = reels.map((url) => `<div class="instagram-frame-wrap"><a class="reel-fallback" href="${url}" target="_blank" rel="noreferrer">Having trouble viewing? Open this Reel on Instagram ↗</a><iframe class="instagram-frame" src="${url}embed/" title="Softly Homely Instagram Reel" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" scrolling="no"></iframe></div>`).join('');
+  grid.innerHTML = reels.map((url) => `<div class="instagram-frame-wrap"><a class="reel-fallback" href="${url}" target="_blank" rel="noreferrer">Open this Reel on Instagram ↗</a><iframe class="instagram-frame" src="${url}embed/" title="Softly Homely Instagram Reel" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" scrolling="no"></iframe></div>`).join('');
 };
 
 renderReels('#reel-grid', viralReels);
